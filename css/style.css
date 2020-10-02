@@ -1,0 +1,16 @@
+.modal{
+  position: fixed;
+  top: -100vh;
+  left: 30vw;
+  width: 40vw;
+  height: 30vh;
+  background-color: #ccc;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 20px;
+  transition: .5s;
+}
+
+.showed{
+  top: 20vh;
+}
