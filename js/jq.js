@@ -8,6 +8,11 @@ $(document).ready(function(){
     $('#text1').slideToggle(700)
     $('#text2').slideToggle(700)
   })
+
+  $.get('https://jsonplaceholder.typicode.com/users', function(data, status){
+    console.log(data)
+    console.log(status)
+  })
 })
 
 // NATIVE JS
