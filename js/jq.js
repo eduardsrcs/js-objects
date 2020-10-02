@@ -3,6 +3,7 @@
 $(document).ready(function(){
   // console.log($('#but1'))
   $('#text2').hide()
+
   $('#but1').click(function(){
     console.log('I\'m clicked by jQuery')
     $('#text1').slideToggle(700)
@@ -12,6 +13,20 @@ $(document).ready(function(){
   $.get('https://jsonplaceholder.typicode.com/users', function(data, status){
     console.log(data)
     console.log(status)
+  })
+
+  $('#fsubmit').click(()=>{
+    $.post("http://192.168.1.151/test.php",
+    {
+      name: $('#user').val(),
+      city: $('#pass').val()
+    },
+    function(data, status){
+      console.log("Data: " + data + "\nStatus: " + status);
+      if(status == 'success') {
+        location.reload()
+      }
+    })
   })
 })
 
