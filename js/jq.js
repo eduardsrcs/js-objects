@@ -17,6 +17,7 @@ $(document).ready(function(){
 
   $('#fsubmit').click(()=>{
     $.post("http://192.168.1.151/test.php",
+    // $.post("http://localhost/php/test.php",
     {
       name: $('#user').val(),
       city: $('#pass').val()
@@ -24,7 +25,10 @@ $(document).ready(function(){
     function(data, status){
       console.log("Data: " + data + "\nStatus: " + status);
       if(status == 'success') {
-        location.reload()
+        $('#modal').html('<h1>Success Login</h1>')
+        setTimeout(() => {
+          location.reload()
+        }, 3000);
       }
     })
   })
