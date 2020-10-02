@@ -1,12 +1,17 @@
-const modal = document.getElementById('modal')
+// jQuery code
 
 $(document).ready(function(){
   // console.log($('#but1'))
+  $('#text2').hide()
   $('#but1').click(function(){
     console.log('I\'m clicked by jQuery')
-    $('#text1').toggle(700)
+    $('#text1').slideToggle(700)
+    $('#text2').slideToggle(700)
   })
 })
+
+// NATIVE JS
+const modal = document.getElementById('modal')
 
 // onclick event from native js
 document.getElementById('but2').onclick = function(){
