@@ -10,10 +10,10 @@ $(document).ready(function(){
     $('#text2').slideToggle(700)
   })
 
-  $.get('https://jsonplaceholder.typicode.com/users', function(data, status){
-    console.log(data)
-    console.log(status)
-  })
+  // $.get('https://jsonplaceholder.typicode.com/users', function(data, status){
+  //   console.log(data)
+  //   console.log(status)
+  // })
 
   $('#fsubmit').click(()=>{
     $.post("http://192.168.1.151/test.php",
@@ -25,10 +25,11 @@ $(document).ready(function(){
     function(data, status){
       console.log("Data: " + data + "\nStatus: " + status);
       if(status == 'success') {
+        console.log($('#modal').html())
         $('#modal').html('<h1>Success Login</h1>')
         setTimeout(() => {
           location.reload()
-        }, 3000);
+        }, 5000);
       }
     })
   })
